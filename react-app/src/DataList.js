@@ -14,7 +14,7 @@ const DataList = () => {
     // DjangoアプリケーションのAPIからデータを取得するHTTPリクエスト
     // axiosライブラリを使用してGETリクエストを実行する
     axios
-      .get("http://localhost:8000/try_models_list/") // APIエンドポイントを指定（DjangoのREST APIからデータ取得）
+      .get("http://localhost:8000/api/try_models_list/") // APIエンドポイントを指定（DjangoのREST APIからデータ取得）
       .then((response) => {
         setData(response.data); // レスポンスデータをstateに保存
         setLoading(false); // ローディング状態をfalseに設定（データ取得完了）

@@ -30,7 +30,7 @@ const App = () => {
     event.preventDefault(); // ブラウザのデフォルト挙動（ページリロード）を防ぐ
     // axiosを使ってバックエンドにデータをPOSTリクエストで送信
     axios
-      .post("http://localhost:8000/try_models_new/", formData) // ローカルのサーバーにデータ送信
+      .post("http://localhost:8000/api/try_models_new/", formData) // ローカルのサーバーにデータ送信
       .then((response) => {
         console.log(response.data); // 成功時のレスポンスデータをコンソールに表示
         alert("データの送信が成功しました！"); // 成功メッセージをアラートで表示

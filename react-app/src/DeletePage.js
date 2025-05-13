@@ -10,7 +10,7 @@ const DeletePage = () => {
   // 指定されたレコードをAPIから取得
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/try_models_update/${id}/`) // GETエンドポイントを利用してレコードデータを取得
+      .get(`http://localhost:8000/api/try_models_update/${id}/`) // GETエンドポイントを利用してレコードデータを取得
       .then((response) => {
         setRecord(response.data); // レコード内容をstateに保存
       })

@@ -3,6 +3,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import try_model
 from .serializers import TryModelSerializer
+from django.shortcuts import render
+
+
+
+def react_view(request):
+    return render(request, 'index.html')  # Reactのindex.htmlを表示
+
 
 
 @api_view(['GET'])

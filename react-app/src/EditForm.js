@@ -15,7 +15,7 @@ const EditForm = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/try_models_update/${id}/`)
+      .get(`http://localhost:8000/api/try_models_update/${id}/`)
       .then((response) => {
         setFormData(response.data);
       })

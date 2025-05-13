@@ -1,4 +1,6 @@
 from pathlib import Path
+import os
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,6 +51,14 @@ TEMPLATES = [
         },
     },
 ]
+
+# 静的ファイルの設定
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/react/static'),  # Reactの静的ファイルディレクトリを指定
+]
+
+# Reactのbuild内のindex.htmlをテンプレートとして指定
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'static/react')]
 
 WSGI_APPLICATION = 'app_project.wsgi.application'
 
