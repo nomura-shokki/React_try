@@ -24,7 +24,7 @@ const DeletePage = () => {
   // レコードを削除する関数
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:8000/try_models_delete/${id}/`)
+      .delete(`http://localhost:8000/api/try_models_delete/${id}/`)
       .then(() => {
         alert("データが削除されました");
         navigate("/data-list"); // 削除後にデータ一覧ページへ移動

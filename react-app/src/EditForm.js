@@ -36,7 +36,7 @@ const EditForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .put(`http://localhost:8000/try_models_update/${id}/`, formData)
+      .put(`http://localhost:8000/api/try_models_update/${id}/`, formData)
       .then((response) => {
         console.log(response.data);
         alert("データが更新されました！");
